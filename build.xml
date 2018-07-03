@@ -1,4 +1,4 @@
-<project name="uma" default="all">
+<project name="pnapi" default="all">
 	
 	<!--
 	
@@ -97,7 +97,7 @@
 		
 		<!-- build distributable JAR file -->
 		<echo message="Creating distributable JAR file ${home}/${build.target}.jar" />
-		<jar destfile="${dir.builddir}/${build.target}.jar" basedir="${dir.builddir}/" manifest="META-INF/MANIFEST.MF">
+		<jar destfile="${dir.builddir}/${build.target}-${build.version}.jar" basedir="${dir.builddir}/" manifest="META-INF/MANIFEST.MF">
 			<include name="**/*.class"/>
 			<include name="AUTHORS"/>
 			<include name="ChangeLog"/>
