@@ -96,7 +96,7 @@
 	    </copy>
 		
 		<!-- build distributable JAR file -->
-		<echo message="Creating distributable JAR file ${home}/${build.target}.jar" />
+		<echo message="Creating distributable JAR file ${home}/${build.target}-${build.version}.jar" />
 		<jar destfile="${dir.builddir}/${build.target}-${build.version}.jar" basedir="${dir.builddir}/" manifest="META-INF/MANIFEST.MF">
 			<include name="**/*.class"/>
 			<include name="AUTHORS"/>
@@ -159,7 +159,7 @@
 			description="Create binary distribution .zip of ${build.name}.">
 		
 		<mkdir dir="${dir.distbindir}/${libs}" />
-		<copy file="${dir.builddir}/${build.target}.jar" todir="${dir.distbindir}/${libs}" />
+		<copy file="${dir.builddir}/${build.target}-${build.version}.jar" todir="${dir.distbindir}/${libs}" />
 		
 		<mkdir dir="${dir.distbindir}/${libs.external}" />
 		<copy todir="${dir.distbindir}/${libs.external}">
